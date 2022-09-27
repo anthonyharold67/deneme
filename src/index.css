@@ -1,13 +1,113 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.app {
+  background-color: hsl(210, 36%, 96%);
+  color: hsl(209, 61%, 16%);
+  padding: 5rem 0;
+  
+}
+.header {
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.btn {
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
+.filterBtn{
+  background: transparent;
+  border-color: transparent;
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
+  letter-spacing: 1px;
+  padding: 0.375rem 0.75rem;
+  color: gold;
+  cursor: pointer;
+  transition: all 0.6s linear;
+  border-radius: 5px;
+}
+.filterBtn:hover {
+  background: gold;
+  animation-name: example;
+  animation-duration: 4s;
+  color: white;
+  transform: scale(3);
+}
+@keyframes example {
+  from {background-color: gold;}
+  to {background-color: orangered;}
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.productMain{
+  min-width: 95%;
+  margin: 0 auto;
+  max-width: 95%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 3rem 2rem;
+  justify-items: center;
+  justify-content: space-around;
+}
+.productDiv{
+  display: flex;
+  max-width: 80%;
+  min-width: 80%;
+  max-height: 90%;
+  min-height: 90%;
+  gap: 2rem 2rem;
+}
+.productImg {
+  max-width: 50%;
+  min-width: 50%;
+}
+.productImg img {
+  object-fit: cover;
+  height: 250px;
+  width: 100%;
+  border: 0.25rem solid tomato;
+  border-radius: 15px;
+  display: block;
+}
+
+.productImg img:hover {
+  transform: scale(2.3) translate(25%, 25%);
+  transition: all 0.6s linear;
+}
+
+.productBody {
+  max-width: 50%;
+  min-width: 50%;
+}
+.productHeader {
+  display: flex;
+  max-width: 100%;
+  min-width: 100%;
+  justify-content: space-between;
+  border-bottom: 0.5px dotted gray;
+}
+
+.productText {
+  margin-bottom: 0;
+  padding-top: 1rem;
+}
+
+.productPrice {
+  color: gold;
+}
+
+
+@media screen and (max-width: 892px) {
+  .productMain{
+    min-width: 95%;
+    margin: 0 auto;
+    max-width: 95%;
+    display: grid;
+    grid-template-columns: 95%;
+    gap: 3rem 2rem;
+    justify-items: center;
+    justify-content: space-around;
+  }
 }
